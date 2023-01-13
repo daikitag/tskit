@@ -11,6 +11,7 @@ echo "arch=$ARCH"
 cd python
 
 for V in "${PYTHON_VERSIONS[@]}"; do
+    ls -lrth /opt/python
     PYBIN=/opt/python/$V/bin
     rm -rf build/       # Avoid lib build by narrow Python is used by wide python
     # Instead of letting setup.py install a newer numpy we install it here
